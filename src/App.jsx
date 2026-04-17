@@ -99,7 +99,7 @@ export default function App() {
           path="/login"
           element={
             currentUser ? (
-              <Navigate to="/profile" replace />
+              <Navigate to="/" replace />
             ) : (
               <Login {...pageProps} onAuthSuccess={handleAuthSuccess} />
             )
@@ -109,7 +109,7 @@ export default function App() {
           path="/register"
           element={
             currentUser ? (
-              <Navigate to="/profile" replace />
+              <Navigate to="/" replace />
             ) : (
               <Register {...pageProps} />
             )
@@ -119,7 +119,7 @@ export default function App() {
           path="/register/verify-otp"
           element={
             currentUser ? (
-              <Navigate to="/profile" replace />
+              <Navigate to="/" replace />
             ) : (
               <RegisterOtp {...pageProps} onAuthSuccess={handleAuthSuccess} />
             )
@@ -129,7 +129,7 @@ export default function App() {
           path="/forgot-password"
           element={
             currentUser ? (
-              <Navigate to="/profile" replace />
+              <Navigate to="/" replace />
             ) : (
               <ForgotPassword {...pageProps} />
             )

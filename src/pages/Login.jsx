@@ -6,7 +6,13 @@ import Navbar from "../components/Navbar";
 import AuthForm from "../components/Auth/AuthForm";
 import { loginUser } from "../api/authApi";
 
-export default function Login({ onSignIn, onSignUp, currentUser, onLogout, onAuthSuccess }) {
+export default function Login({
+  onSignIn,
+  onSignUp,
+  currentUser,
+  onLogout,
+  onAuthSuccess,
+}) {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -40,7 +46,7 @@ export default function Login({ onSignIn, onSignUp, currentUser, onLogout, onAut
 
       onAuthSuccess?.(response, form.email);
       toast.success("Login successful");
-      navigate("/profile");
+      navigate("/");
     } catch (error) {
       const message = error.response?.data?.message || "Login failed";
       setErrorMessage(message);

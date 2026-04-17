@@ -83,7 +83,7 @@ export default function RegisterOtp({
       sessionStorage.removeItem(PENDING_REGISTER_KEY);
       toast.success("Account created successfully");
       onAuthSuccess?.(loginResponse, pending.email);
-      navigate("/profile");
+      navigate("/");
     } catch (error) {
       const message =
         error.response?.data?.message || "OTP verification failed";
